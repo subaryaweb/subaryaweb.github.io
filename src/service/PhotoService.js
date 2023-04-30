@@ -1,109 +1,79 @@
-export const PhotoService = {
+export const PhotoServiceMC = {
 	getData() {
 		return [
 			{
-				itemImageSrc:
-					"https://primevue.org/images/galleria/galleria3.jpg",
-				thumbnailImageSrc:
-					"https://primevue.org/images/galleria/galleria3s.jpg",
+				itemImageSrc: "https://imgur.com/yLrH644.png",
+				thumbnailImageSrc: "https://imgur.com/jqPvXiS.png",
 				alt: "Description for Image 3",
 				title: "Title 3",
 			},
 			{
-				itemImageSrc:
-					"https://primevue.org/images/galleria/galleria4.jpg",
-				thumbnailImageSrc:
-					"https://primevue.org/images/galleria/galleria4s.jpg",
-				alt: "Description for Image 4",
-				title: "Title 4",
+				itemImageSrc: "https://imgur.com/e1TZqXE.png",
+				thumbnailImageSrc: "https://imgur.com/6BnhMl1.png",
+				alt: "Description for Image 3",
+				title: "Title 3",
 			},
 			{
-				itemImageSrc:
-					"https://primevue.org/images/galleria/galleria5.jpg",
-				thumbnailImageSrc:
-					"https://primevue.org/images/galleria/galleria5s.jpg",
-				alt: "Description for Image 5",
-				title: "Title 5",
+				itemImageSrc: "https://imgur.com/B1Z5IGd.png",
+				thumbnailImageSrc: "https://imgur.com/yrOZVxp.png",
+				alt: "Description for Image 3",
+				title: "Title 3",
 			},
 			{
-				itemImageSrc:
-					"https://primevue.org/images/galleria/galleria6.jpg",
-				thumbnailImageSrc:
-					"https://primevue.org/images/galleria/galleria6s.jpg",
-				alt: "Description for Image 6",
-				title: "Title 6",
+				itemImageSrc: "https://imgur.com/VvisrSO.png",
+				thumbnailImageSrc: "https://imgur.com/wXIRx5F.png",
+				alt: "Description for Image 3",
+				title: "Title 3",
+			},
+		];
+	},
+
+	getImages() {
+		return Promise.resolve(this.getData());
+	},
+};
+export const PhotoServiceJC = {
+	getData() {
+		return [
+			{
+				itemImageSrc: "https://imgur.com/J3ZfOcC.png",
+				thumbnailImageSrc: "https://imgur.com/2I7pKb5.png",
+				alt: "Description for Image 3",
+				title: "Title 3",
 			},
 			{
-				itemImageSrc:
-					"https://primevue.org/images/galleria/galleria7.jpg",
-				thumbnailImageSrc:
-					"https://primevue.org/images/galleria/galleria7s.jpg",
-				alt: "Description for Image 7",
-				title: "Title 7",
+				itemImageSrc: "https://imgur.com/3Lb7gM1.png",
+				thumbnailImageSrc: "https://imgur.com/9dt1pyu.png",
+				alt: "Description for Image 3",
+				title: "Title 3",
+			},
+		];
+	},
+
+	getImages() {
+		return Promise.resolve(this.getData());
+	},
+};
+export const PhotoServiceNTNUADM = {
+	getData() {
+		return [
+			{
+				itemImageSrc: "https://imgur.com/BQnWaf8.png",
+				thumbnailImageSrc: "https://imgur.com/TIPHKiU.png",
+				alt: "Description for Image 3",
+				title: "Title 3",
 			},
 			{
-				itemImageSrc:
-					"https://primevue.org/images/galleria/galleria8.jpg",
-				thumbnailImageSrc:
-					"https://primevue.org/images/galleria/galleria8s.jpg",
-				alt: "Description for Image 8",
-				title: "Title 8",
+				itemImageSrc: "https://imgur.com/B2beSsa.png",
+				thumbnailImageSrc: "https://imgur.com/AcrJFZM.png",
+				alt: "Description for Image 3",
+				title: "Title 3",
 			},
 			{
-				itemImageSrc:
-					"https://primevue.org/images/galleria/galleria9.jpg",
-				thumbnailImageSrc:
-					"https://primevue.org/images/galleria/galleria9s.jpg",
-				alt: "Description for Image 9",
-				title: "Title 9",
-			},
-			{
-				itemImageSrc:
-					"https://primevue.org/images/galleria/galleria10.jpg",
-				thumbnailImageSrc:
-					"https://primevue.org/images/galleria/galleria10s.jpg",
-				alt: "Description for Image 10",
-				title: "Title 10",
-			},
-			{
-				itemImageSrc:
-					"https://primevue.org/images/galleria/galleria11.jpg",
-				thumbnailImageSrc:
-					"https://primevue.org/images/galleria/galleria11s.jpg",
-				alt: "Description for Image 11",
-				title: "Title 11",
-			},
-			{
-				itemImageSrc:
-					"https://primevue.org/images/galleria/galleria12.jpg",
-				thumbnailImageSrc:
-					"https://primevue.org/images/galleria/galleria12s.jpg",
-				alt: "Description for Image 12",
-				title: "Title 12",
-			},
-			{
-				itemImageSrc:
-					"https://primevue.org/images/galleria/galleria13.jpg",
-				thumbnailImageSrc:
-					"https://primevue.org/images/galleria/galleria13s.jpg",
-				alt: "Description for Image 13",
-				title: "Title 13",
-			},
-			{
-				itemImageSrc:
-					"https://primevue.org/images/galleria/galleria14.jpg",
-				thumbnailImageSrc:
-					"https://primevue.org/images/galleria/galleria14s.jpg",
-				alt: "Description for Image 14",
-				title: "Title 14",
-			},
-			{
-				itemImageSrc:
-					"https://primevue.org/images/galleria/galleria15.jpg",
-				thumbnailImageSrc:
-					"https://primevue.org/images/galleria/galleria15s.jpg",
-				alt: "Description for Image 15",
-				title: "Title 15",
+				itemImageSrc: "https://imgur.com/P52q36z.png",
+				thumbnailImageSrc: "https://imgur.com/K7zkzeT.png",
+				alt: "Description for Image 3",
+				title: "Title 3",
 			},
 		];
 	},
