@@ -10,7 +10,7 @@ import WindiCSS from 'vite-plugin-windicss'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/subaryaweb.github.io/",
+  base: env.VITE_PUBLIC_PATH,
   plugins: [
     vue(),
     Components({
