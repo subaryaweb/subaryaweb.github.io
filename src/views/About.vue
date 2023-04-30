@@ -1,7 +1,6 @@
 <template>
 	<Card
 		class="mt--12 mx-4 sm:mx-8 md:mx-12 lg:mx-12 xl:mx-12 2xl:mx-auto mt-24 max-w-screen-2xl shadow-color border-2"
-		v-if="!checked"
 	>
 		<template #title>
 			<div class="mt-5 ml-8 text-4xl">Whoami</div></template
@@ -20,13 +19,6 @@
 				</div>
 			</div>
 		</template>
-	</Card>
-	<Card
-		class="mx-4 sm:mx-8 md:mx-12 lg:mx-12 xl:mx-12 2xl:mx-auto mt-24 max-w-screen-2xl shadow-color-dark border-2"
-		v-else
-	>
-		<template #title> Whoami </template>
-		<template #content> </template>
 	</Card>
 </template>
 

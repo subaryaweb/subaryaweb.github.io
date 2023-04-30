@@ -22,6 +22,8 @@
 </template>
 <script setup lang="ts">
 import { usePrimeVue } from "primevue/config";
+import { useRouter } from "vue-router";
+import { ref } from "vue";
 // import { themeStore } from "@/store/theme";
 const PrimeVue = usePrimeVue();
 const router = useRouter();
@@ -55,7 +57,7 @@ const toggleTheme = () => {
 	let nextTheme = "lara-light-blue";
 	if (currentTheme.value === "lara-light-blue") nextTheme = "viva-dark";
 	else if (currentTheme.value === "viva-dark") nextTheme = "lara-light-blue";
-	PrimeVue.changeTheme(currentTheme.value, nextTheme, "id-to-link", () => {});
+	// PrimeVue.changeTheme(currentTheme.value, nextTheme, "id-to-link", () => {});
 	// theme.$patch(nextTheme);
 	// console.log(themeStore.state());
 	currentTheme.value = nextTheme;

@@ -10,17 +10,17 @@ const routes: Array<RouteRecordRaw> = [
 	{
 		path: "/",
 		name: "HomePage",
-		component: () => import("@/views/HomePage.vue"),
+		component: () => import("../views/HomePage.vue"),
 	},
 	{
 		path: "/about",
 		name: "AboutPage",
-		component: () => import("@/views/About.vue"),
+		component: () => import("../views/About.vue"),
 	},
 	{
 		path: "/projects",
 		name: "projectsPage",
-		component: () => import("@/views/Projects.vue"),
+		component: () => import("../views/Projects.vue"),
 	},
 ];
 export const router: Router = createRouter({

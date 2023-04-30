@@ -308,11 +308,12 @@
 </template>
 
 <script setup lang="ts">
+import { ref, onMounted } from "vue";
 import {
 	PhotoServiceMC,
 	PhotoServiceJC,
 	PhotoServiceNTNUADM,
-} from "@/service/PhotoService";
+} from "../service/PhotoService";
 const MCimages = ref();
 const JCimages = ref();
 const NTNUADMimages = ref();
@@ -336,10 +337,10 @@ const responsiveOptions = ref([
 	},
 ]);
 onMounted(() => {
-	PhotoServiceMC.getImages().then((data) => (MCimages.value = data));
-	PhotoServiceJC.getImages().then((data) => (JCimages.value = data));
+	PhotoServiceMC.getImages().then((data: any) => (MCimages.value = data));
+	PhotoServiceJC.getImages().then((data: any) => (JCimages.value = data));
 	PhotoServiceNTNUADM.getImages().then(
-		(data) => (NTNUADMimages.value = data)
+		(data: any) => (NTNUADMimages.value = data)
 	);
 });
 </script>

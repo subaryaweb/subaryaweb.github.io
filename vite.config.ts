@@ -10,7 +10,7 @@ import WindiCSS from 'vite-plugin-windicss'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: env.VITE_PUBLIC_PATH,
+  // base: env.VITE_PUBLIC_PATH,
   plugins: [
     vue(),
     Components({
