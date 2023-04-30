@@ -35,6 +35,11 @@ export default defineConfig({
         "vue",
         "vue-router",
       ],
+      eslintrc: {
+				enabled: false, // Default `false`
+				filepath: "./.eslintrc-auto-import.json", // Default `./.eslintrc-auto-import.json`
+				globalsPropValue: true, // Default `true`, (true | false | 'readonly' | 'readable' | 'writable' | 'writeable')
+			},
     }),
     WindiCSS(),
   ],
@@ -43,11 +48,11 @@ export default defineConfig({
       "@": resolve(__dirname, "./src"),
     },
   },
-  server: {
-    port: 8080,
-    hmr: {
-        host: "127.0.0.1",
-        port: 8080
-    },
-  }
+  // server: {
+  //   port: 4000,
+  //   hmr: {
+  //       host: "127.0.0.1",
+  //       port: 4000
+  //   },
+  // }
 })

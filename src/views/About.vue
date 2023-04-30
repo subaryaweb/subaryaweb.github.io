@@ -4,20 +4,28 @@
 		v-if="!checked"
 	>
 		<template #title>
-			<div class="mt-5 mx-auto flex justify-center text-4xl">
-				Welcome to SubaRya's Page !
-			</div>
-		</template>
+			<div class="mt-5 ml-8 text-4xl">Whoami</div></template
+		>
 		<template #content>
-			<div class="ml-12 text-2xl flex justify-center"></div>
-			<div class="ml-12 text-2xl flex justify-center"></div>
+			<div class="ml-12">
+				<div class="flex">
+					<i class="pi pi-user mr-4" style="font-size: 1.5rem"></i>
+					<div class="text-xl">名稱: 蘇子權 (SubaRya)</div>
+				</div>
+				<div class="flex mt-6">
+					<i class="pi pi-file mr-4" style="font-size: 1.5rem"></i>
+					<div class="text-xl">
+						簡介: 目前就讀於臺灣師範大學資訊工程系
+					</div>
+				</div>
+			</div>
 		</template>
 	</Card>
 	<Card
 		class="mx-4 sm:mx-8 md:mx-12 lg:mx-12 xl:mx-12 2xl:mx-auto mt-24 max-w-screen-2xl shadow-color-dark border-2"
 		v-else
 	>
-		<template #title> Welcome ! </template>
+		<template #title> Whoami </template>
 		<template #content> </template>
 	</Card>
 </template>

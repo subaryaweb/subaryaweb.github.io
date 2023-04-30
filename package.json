@@ -11,6 +11,7 @@
 		"lint:fix": "eslint --fix --ext .ts,.js,.jsx,.vue ."
 	},
 	"dependencies": {
+		"@types/node": "^18.16.3",
 		"@vueuse/core": "^9.13.0",
 		"eslint-config-prettier": "^8.8.0",
 		"eslint-plugin-prettier": "^4.2.1",
