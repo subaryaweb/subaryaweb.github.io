@@ -1,0 +1,73 @@
+name: Deploy
+
+on:
+    push:
+        branches:
+            - main
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v3
+
+            - name: Setup Node
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 16
+
+            - name: Install pnpm
+              uses: pnpm/action-setup@v2
+              id: pnpm-install
+              with:
+                  version: 7
+                  run_install: false
+
+            - name: Get pnpm store directory
+              id: pnpm-cache
+              shell: bash
+              run: |
+                  echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+
+            - uses: actions/cache@v3
+              name: Setup pnpm cache
+              with:
+                  path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+                  key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+                  restore-keys: |
+                      ${{ runner.os }}-pnpm-store-
+
+            - name: Install dependencies
+              run: pnpm install
+
+            - name: Build site
+              run: pnpm build
+            
+            - name: Archive build files
+              uses: actions/upload-artifact@v3
+              with:
+                  name: my-artifact
+                  path: dist/
+
+            
+    deploy:
+        needs: build
+        runs-on: ubuntu-latest
+        steps:
+            - name: Download build artifact
+              uses: actions/download-artifact@v3
+              with:
+                  name: my-artifact
+                  path: dist/
+
+            - name: Deploy to server
+              uses: easingthemes/ssh-deploy@main
+              env:
+                  REMOTE_HOST: ${{ secrets.SERVER_HOST }}
+                  REMOTE_PORT: ${{ secrets.SERVER_PORT }}
+                  REMOTE_USER: ${{ secrets.SERVER_USERNAME }}
+                  SSH_PRIVATE_KEY: ${{ secrets.SERVER_KEY }}
+                  ARGS: "-rlgoDzvc -i --delete"
+                  SOURCE: "dist/"
+                  TARGET: ${{ secrets.REMOTE_TARGET }}
+                  EXCLUDE: "/dist/, /node_modules/"
