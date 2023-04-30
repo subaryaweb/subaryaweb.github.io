@@ -11,6 +11,9 @@
 				<AccordionTab>
 					<template #header>
 						<span>臺師大資訊工程學系報名系統</span>
+                        <Tag class="tooltip" data-placement="top" data-tooltip="專案可見性"  rounded>
+                            <span class="tooltiptext">Private</span>
+                        </Tag>
 					</template>
 					<Splitter style="height: 500px" class="mb-5">
 						<SplitterPanel class="overflow-auto m-12">
@@ -23,19 +26,21 @@
                             <div class="flex ">
                                 <ui class="text-xl">
                                     Tool Key: 
-                                    <li>Git</li>
+                                    <li>GitLab</li>
+                                    <li>Vite</li>
+                                    <li>TanStack Query</li>
                                     <li>PNPM</li>
                                     <li>Linear App</li>
+                                    <li>Eslint</li>
+                                    <li>Prettier</li>
                                 </ui>
                                 <ui class="mx-auto text-xl">
                                     Key Skill:
-                                    <li >Figma</li>
+                                    <li>Figma</li>
                                     <li>Vue.js</li>
                                     <li>Windi CSS</li>
                                     <li>TypeScript</li>
                                     <li>PrimeVue</li>
-                                    <li>Eslint</li>
-                                    <li>Prettier</li>
                                 </ui>
                             </div>
 							
@@ -70,84 +75,34 @@
 						</SplitterPanel>
 					</Splitter>
 				</AccordionTab>
-				<AccordionTab>
+				
+                <AccordionTab>
 					<template #header>
-						<span>Header II</span>
+						<span>GDMC</span>
+                        <Tag class="tooltip" data-placement="top" data-tooltip="專案可見性"  rounded>
+                            <span class="tooltiptext">Private</span>
+                        </Tag>
 					</template>
 					<Splitter style="height: 500px" class="mb-5">
-						<SplitterPanel
-							class="flex align-items-center justify-content-center"
-						>
-							<p class="m-0">
-								Lorem ipsum dolor sit amet, consectetur
-								adipiscing elit, sed do eiusmod tempor
-								incididunt ut labore et dolore magna aliqua. Ut
-								enim ad minim veniam, quis nostrud exercitation
-								ullamco laboris nisi ut aliquip ex ea commodo
-								consequat. Duis aute irure dolor in
-								reprehenderit in voluptate velit esse cillum
-								dolore eu fugiat nulla pariatur. Excepteur sint
-								occaecat cupidatat non proident, sunt in culpa
-								qui officia deserunt mollit anim id est laborum.
-							</p>
-						</SplitterPanel>
-						<SplitterPanel
-							class="flex align-items-center justify-content-center"
-						>
-							<div class="card md:flex md:justify-content-center">
-								<Galleria
-									:value="images"
-									:responsiveOptions="responsiveOptions"
-									:numVisible="5"
-									containerStyle="max-width: 400px"
-								>
-									<template #item="slotProps">
-										<img
-											:src="slotProps.item.itemImageSrc"
-											:alt="slotProps.item.alt"
-											style="width: 100%"
-										/>
-									</template>
-									<template #thumbnail="slotProps">
-										<img
-											:src="
-												slotProps.item.thumbnailImageSrc
-											"
-											:alt="slotProps.item.alt"
-										/>
-									</template>
-								</Galleria>
+						<SplitterPanel class="overflow-auto m-12">
+							<div class="text-xl mb-8">
+								基於 Python 開發的工具，能夠在 <a class="text-blue-500 hover:underline" href="https://www.minecraft.net/">Minecraft</a> 3D 沙盒
+                                遊戲中自動生成適應各種地形與環境的村莊。由於目前此專案正處於<a class="text-blue-500 hover:underline" href="https://gendesignmc.engineering.nyu.edu/">參賽期</a>而設定 Private。
 							</div>
-						</SplitterPanel>
-					</Splitter>
-				</AccordionTab>
-			</Accordion>
-		</template>
-	</Card>
-	<!-- <Card
-		class="mt--12 my-8 mx-4 sm:mx-8 md:mx-12 lg:mx-12 xl:mx-12 2xl:mx-auto mt-24 max-w-screen-2xl shadow-color-dark border-2"
-		v-else
-	>
-		<template #title> 專案與貢獻 </template>
-		<template #content>
-			<Accordion class="accordion-custom" :activeIndex="0">
-				<AccordionTab>
-					<template #header>
-						<span>臺師大資訊工程學系報名系統</span>
-					</template>
-					<Splitter style="height: 500px" class="mb-5">
-						<SplitterPanel class="list-disc truncate m-12">
-							<li>
-								此為 2022
-								臺師大軟體工程課程專案。在此專案中我擔任前端組長，採取
-								Scrum Agile Framwork 帶領 8
-								位同學開發，其中也擔任 Scrum Master。
-							</li>
-							<li>Tool Key: Git, PNPM, Linear App</li>
-							<li>
-								Key Skill: Figma, Vue.js, Windi CSS, TypeScript,
-								PrimeVue, Eslint, Prettier
-							</li>
+                            <div class="flex ">
+                                <ui class="text-xl">
+                                    Tool Key: 
+                                    <li>GitHub</li>
+                                    <li><a class="text-blue-500 hover:underline" href="https://github.com/avdstaaij/gdpc">GDPC 6.0</a></li>
+                                </ui>
+                                <ui class="mx-auto text-xl">
+                                    Key Skill & 負責工作:
+                                    <li>Python</li>
+                                    <li>Multi-Agent System 架構設計</li>
+                                    <li>環境與資源分析、世界階級量化</li>
+                                </ui>
+                            </div>
+							
 						</SplitterPanel>
 						<SplitterPanel class="flex items-center justify-center">
 							<div
@@ -179,31 +134,45 @@
 						</SplitterPanel>
 					</Splitter>
 				</AccordionTab>
-				<AccordionTab>
+                
+                <AccordionTab>
 					<template #header>
-						<span>Header II</span>
+						<span>CP_Discussion</span>
+                        <Tag class="tooltip" data-placement="top" data-tooltip="專案可見性"  rounded>
+                            <span class="tooltiptext">Public</span>
+                        </Tag>
 					</template>
 					<Splitter style="height: 500px" class="mb-5">
-						<SplitterPanel
-							class="flex align-items-center justify-content-center"
-						>
-							<p class="m-0">
-								Lorem ipsum dolor sit amet, consectetur
-								adipiscing elit, sed do eiusmod tempor
-								incididunt ut labore et dolore magna aliqua. Ut
-								enim ad minim veniam, quis nostrud exercitation
-								ullamco laboris nisi ut aliquip ex ea commodo
-								consequat. Duis aute irure dolor in
-								reprehenderit in voluptate velit esse cillum
-								dolore eu fugiat nulla pariatur. Excepteur sint
-								occaecat cupidatat non proident, sunt in culpa
-								qui officia deserunt mollit anim id est laborum.
-							</p>
+						<SplitterPanel class="overflow-auto m-12">
+							<div class="text-xl mb-8">
+								此為因應程式設計一、二課程助教一職，為原本構想用於課程的討論區。
+							</div>
+                            <div class="flex ">
+                                <ui class="text-xl">
+                                    Tool Key: 
+                                    <li>GitHub</li>
+                                    <li>PNPM</li>
+                                    <li>Vite</li>
+                                    <li>Docker</li>
+                                    <li>Eslint</li>
+                                    <li>Prettier</li>
+                                </ui>
+                                <ui class="mx-auto text-xl">
+                                    Key Skill:
+                                    <li>Vue.js</li>
+                                    <li>Windi CSS</li>
+                                    <li>TypeScript</li>
+                                    <li>Naive UI</li>
+                                    <li>Go</li>
+                                    <li>gqlgen</li>
+                                </ui>
+                            </div>
+							
 						</SplitterPanel>
-						<SplitterPanel
-							class="flex align-items-center justify-content-center"
-						>
-							<div class="card md:flex md:justify-content-center">
+						<SplitterPanel class="flex items-center justify-center">
+							<div
+								class="card md:flex md:justify-center mx-2 sm:mx-2 md:mx-2 lg:mx-2 xl:mx-4 2xl:mx-auto"
+							>
 								<Galleria
 									:value="images"
 									:responsiveOptions="responsiveOptions"
@@ -230,10 +199,71 @@
 						</SplitterPanel>
 					</Splitter>
 				</AccordionTab>
-			</Accordion>
+
+                <AccordionTab>
+					<template #header>
+						<span>jc</span>
+                        <Tag class="tooltip" data-placement="top" data-tooltip="專案可見性"  rounded>
+                            <span class="tooltiptext">Public</span>
+                        </Tag>
+					</template>
+					<Splitter style="height: 500px" class="mb-5">
+						<SplitterPanel class="overflow-auto m-12">
+							<div class="text-xl mb-8">
+								此為社群貢獻專案。 
+                                <a class="text-blue-500 hover:underline" href="https://github.com/kellyjonbrazil/jc">jc</a>
+                                    
+                                是有著 6.2k Star 的 JSON Convert CLI tools，使用後發現 Git Log parse to JSON 功能有誤，
+                                於是 fork 並且修改了此功能，並且發了 
+                                <a class="text-blue-500 hover:underline" href="https://github.com/kellyjonbrazil/jc/issues/395">Issue</a> 給原作者，最後收到有採納並於下一版本會更新的通知。
+							</div>
+                            <div class="flex ">
+                                <ui class="text-xl">
+                                    Tool Key: 
+                                    <li>GitHub</li>
+                                </ui>
+                                <ui class="mx-auto text-xl">
+                                    Key Skill:
+                                    <li >Python</li>
+                                    <li >Regex</li>
+                                </ui>
+                            </div>
+							
+						</SplitterPanel>
+						<SplitterPanel class="flex items-center justify-center">
+							<div
+								class="card md:flex md:justify-center mx-2 sm:mx-2 md:mx-2 lg:mx-2 xl:mx-4 2xl:mx-auto"
+							>
+								<Galleria
+									:value="images"
+									:responsiveOptions="responsiveOptions"
+									:numVisible="5"
+									containerStyle="max-width: 400px"
+								>
+									<template #item="slotProps">
+										<img
+											:src="slotProps.item.itemImageSrc"
+											:alt="slotProps.item.alt"
+											style="width: 100%"
+										/>
+									</template>
+									<template #thumbnail="slotProps">
+										<img
+											:src="
+												slotProps.item.thumbnailImageSrc
+											"
+											:alt="slotProps.item.alt"
+										/>
+									</template>
+								</Galleria>
+							</div>
+						</SplitterPanel>
+					</Splitter>
+				</AccordionTab>
+            </Accordion>
 		</template>
-	</Card> -->
-	<!-- GDMC, CP_Discussion, STPad -->
+	</Card>
+	
 </template>
 
 <script setup lang="ts">
@@ -290,5 +320,107 @@ onMounted(() => {
 
 .shadow-color-dark:hover {
 	box-shadow: 0 0 11px rgb(255, 255, 255);
+}
+
+// .tooltip {
+//   position: relative;
+//   display: inline-block;
+//   border-bottom: 1px dotted black;
+// }
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip:before,
+.tooltip:after {
+  position: absolute;
+  visibility: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition: 
+    opacity 0.2s ease-in-out,
+    visibility 0.2s ease-in-out,
+    -webkit-transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+  -moz-transition:    
+    opacity 0.2s ease-in-out,
+    visibility 0.2s ease-in-out,
+    -moz-transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+  transition:         
+    opacity 0.2s ease-in-out,
+    visibility 0.2s ease-in-out,
+    transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform:    translate3d(0, 0, 0);
+  transform:         translate3d(0, 0, 0);
+  pointer-events: none;
+}
+
+.tooltip:hover:before,.tooltip:hover:after,
+.tooltip:focus:before,.tooltip:focus:after {
+  visibility: visible;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+
+.tooltip:before{
+  z-index: 1001;
+  border: 6px solid transparent;
+  background: transparent;
+  content: "";
+}
+
+.tooltip:after{
+  z-index: 1000;
+  padding: 8px;
+  width: 160px;
+  background-color: #000;
+  background-color: rgba(0,0,0,0.8);
+  color: #fff;
+  content: attr(data-tooltip);
+  font-size: 14px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+
+
+.tooltip:before,
+.tooltip:after,
+.tooltip[data-placement="top"]:before,
+.tooltip[data-placement="top"]:after {
+  bottom: 100%;
+  left: 50%;
+}
+
+
+.tooltip:before,
+.tooltip[data-placement="top"]:before {
+  margin-left: -6px;
+  margin-bottom: -12px;
+  border-top-color: #000;
+  border-top-color: rgba(0,0,0,0.8);
+}
+
+
+.tooltip:after,
+.tooltip[data-placement="top"]:after{
+  margin-left: -80px;
+}
+
+.tooltip:hover:before,
+.tooltip:hover:after,
+.tooltip:focus:before,
+.tooltip:focus:after,
+.tooltip[data-placement="top"]:hover:before,
+.tooltip[data-placement="top"]:hover:after,
+.tooltip[data-placement="top"]:focus:before,
+.tooltip[data-placement="top"]:focus:after{
+  -webkit-transform: translateY(-12px);
+  -moz-transform:    translateY(-12px);
+  transform:         translateY(-12px); 
 }
 </style>
