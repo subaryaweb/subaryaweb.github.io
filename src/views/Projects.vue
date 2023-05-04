@@ -195,6 +195,11 @@
 									<li>gqlgen</li>
 								</ui>
 							</div>
+							<div class="flex justify-center mt-8 text-xl">
+								<a class="text-blue-500 hover:underline" href="https://github.com/FateAC/CP_Discussion_Front-End">
+									CP_Discussion Repo Link
+								</a>
+							</div>
 						</SplitterPanel>
 						<SplitterPanel class="flex items-center justify-center">
 							<div
