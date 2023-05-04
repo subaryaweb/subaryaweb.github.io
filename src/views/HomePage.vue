@@ -1,6 +1,6 @@
 <template>
 	<Card
-		class="mt--12 mx-4 sm:mx-8 md:mx-12 lg:mx-12 xl:mx-12 2xl:mx-auto mt-24 max-w-screen-2xl shadow-color border-2"
+		class="mt--12 mx-8 sm:mx-8 md:mx-12 lg:mx-12 xl:mx-12 2xl:mx-12 mt-24 max-w-full shadow-color border-2"
 	>
 		<template #title>
 			<div class="mt-5 mx-auto flex justify-center text-4xl">
