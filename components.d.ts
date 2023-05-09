@@ -15,7 +15,6 @@ declare module '@vue/runtime-core' {
     Card: typeof import('primevue/card')['default']
     Galleria: typeof import('primevue/galleria')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
-    InputSwitch: typeof import('primevue/inputswitch')['default']
     Menubar: typeof import('primevue/menubar')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']

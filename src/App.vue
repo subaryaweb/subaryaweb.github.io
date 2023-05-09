@@ -9,13 +9,13 @@
 			/>
 		</template>
 		<template #end>
-			<div class="card flex justify-content-center">
+			<!--<div class="card flex justify-content-center">
 				<InputSwitch
 					class="mr-12"
 					v-model="checked"
 					@click="toggleTheme"
 				/>
-			</div>
+			</div>-->
 		</template>
 	</Menubar>
 	<router-view />
