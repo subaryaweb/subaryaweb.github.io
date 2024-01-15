@@ -1,47 +1,53 @@
 <template>
-	<Card
-		class="mt--12 mx-8 sm:mx-8 md:mx-12 lg:mx-12 xl:mx-12 2xl:mx-12 mt-24 max-w-full shadow-color border-2"
-	>
-		<template #title>
-			<div class="mt-5 mx-auto flex justify-center text-4xl">
-				Welcome to SubaRya's Page !
-			</div>
-		</template>
-		<template #content>
-			<div class="ml-12 text-2xl flex justify-center"></div>
-			<div class="ml-12 text-2xl flex justify-center"></div>
-		</template>
-	</Card>
+	<t-layout>
+		<t-header class="flex items-center h-[calc(72px)]">
+			<t-head-menu default-value="2-1" expand-type="popup">
+				<template #logo>
+					<router-link :to="{name: 'HomePage'}">
+						<div class="font-bold text-xl ml-8"> SubaRya</div>
+					</router-link>
+				</template>
+				<t-menu-item value="2" class="text-md font-semibold">
+					Home
+				</t-menu-item>
+				<t-menu-item value="3" class="text-md font-semibold">
+					About Me
+				</t-menu-item>
+				<t-menu-item value="3" class="text-md font-semibold">
+					Projects
+				</t-menu-item>
+				<template #operations>
+					<t-button variant="text" shape="square" class="mr-4">
+						<template #icon>
+							<a href="https://github.com/LATIA112-1-Finial-Project" target="_blank">
+								<LogoGithubIcon />
+							</a>
+						</template>
+					</t-button>
+				</template>
+			</t-head-menu>
+		</t-header>
+		<t-layout class="flex">
+			<Content class="h-[calc(100vh-72px)] overflow-y-auto py-8 px-12 flex items-center justify-center flex-col">
+				<t-card hover-shadow header-bordered
+						class="flex items-center justify-center font-bold text-3xl w-2/3 h-2/3 rounded-3xl">
+					<div>
+						Hi,
+					</div>
+					<div>
+						Welcome to SubaRya's Page !
+					</div>
+				</t-card>
+			</Content>
+		</t-layout>
+	</t-layout>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import {LogoGithubIcon} from "tdesign-icons-vue-next";
+import {Content} from "tdesign-vue-next";
 
-<style lang="scss">
-.accordion-custom i span {
-	vertical-align: middle;
-}
+</script>
 
-.accordion-custom span {
-	margin: 0 0.5rem;
-}
-
-.shadow-color {
-	transition: box-shadow 0.3s;
-	border-radius: 10px;
-}
-
-.shadow-color:hover {
-	box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
-}
-
-.shadow-color-dark {
-	transition: box-shadow 0.3s;
-	border-color: rgb(38, 50, 56);
-	border-width: 1px;
-	border-radius: 10px;
-}
-
-.shadow-color-dark:hover {
-	box-shadow: 0 0 11px rgb(255, 255, 255);
-}
+<style scoped>
 </style>

@@ -1,15 +1,16 @@
-import { createApp } from "vue";
-import "primeicons/primeicons.css";
-import "primevue/resources/primevue.min.css";
-import App from "./App.vue";
-import store from "./store";
-import PrimeVue from "primevue/config";
-import { router } from "./router/index";
-import "virtual:windi.css";
+import {createApp} from 'vue'
+import TDesign from 'tdesign-vue-next';
+import './style.css'
+import App from './App.vue'
+import {createPinia} from "pinia"
+import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
+import {router} from '@/router/index'
 
-const app = createApp(App);
-app.use(router);
-app.use(store);
-app.use(PrimeVue);
+const pinia = createPinia()
+pinia.use(piniaPluginPersistedstate)
 
-app.mount("#app");
+const app = createApp(App)
+app.use(pinia)
+app.use(router)
+app.use(TDesign)
+app.mount('#app')
