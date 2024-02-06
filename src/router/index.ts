@@ -11,16 +11,18 @@ const routes: Array<RouteRecordRaw> = [
 		path: "/",
 		name: "HomePage",
 		component: () => import("../views/HomePage.vue"),
-	},
-	{
-		path: "/about",
-		name: "AboutPage",
-		component: () => import("../views/About.vue"),
-	},
-	{
-		path: "/projects",
-		name: "projectsPage",
-		component: () => import("../views/Projects.vue"),
+		children: [
+			{
+				path: "/projects",
+				name: "projectsPage",
+				component: () => import("../views/Projects.vue"),
+			},
+			{
+				path: "/about",
+				name: "aboutPage",
+				component: () => import("../views/About.vue"),
+			},
+		],
 	},
 ];
 export const router: Router = createRouter({

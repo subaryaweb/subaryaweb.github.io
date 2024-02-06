@@ -10,16 +10,16 @@
 				<t-menu-item value="2" class="text-md font-semibold">
 					Home
 				</t-menu-item>
-				<t-menu-item value="3" class="text-md font-semibold">
+				<t-menu-item value="3" class="text-md font-semibold" @click="handleClickAboutme()">
 					About Me
 				</t-menu-item>
-				<t-menu-item value="3" class="text-md font-semibold">
+				<t-menu-item value="3" class="text-md font-semibold" @click="handleClickProjects()">
 					Projects
 				</t-menu-item>
 				<template #operations>
 					<t-button variant="text" shape="square" class="mr-4">
 						<template #icon>
-							<a href="https://github.com/LATIA112-1-Finial-Project" target="_blank">
+							<a href="https://github.com/KutsunaSubaRya" target="_blank">
 								<LogoGithubIcon />
 							</a>
 						</template>
@@ -28,7 +28,9 @@
 			</t-head-menu>
 		</t-header>
 		<t-layout class="flex">
-			<Content class="h-[calc(100vh-72px)] overflow-y-auto py-8 px-12 flex items-center justify-center flex-col">
+			<router-view v-if="pageVal">
+			</router-view>
+			<Content v-if="!pageVal" class="h-[calc(100vh-72px)] overflow-y-auto py-8 px-12 flex items-center justify-center flex-col">
 				<t-card hover-shadow header-bordered
 						class="flex items-center justify-center font-bold text-3xl w-2/3 h-2/3 rounded-3xl">
 					<div>
@@ -46,7 +48,21 @@
 <script setup lang="ts">
 import {LogoGithubIcon} from "tdesign-icons-vue-next";
 import {Content} from "tdesign-vue-next";
+import {useRouter} from "vue-router";
+import {ref} from "vue";
 
+const router = useRouter();
+const pageVal = ref(false);
+
+const handleClickProjects = () => {
+	pageVal.value = true;
+	router.push({name: 'projectsPage'});
+};
+
+const handleClickAboutme = () => {
+	pageVal.value = true;
+	router.push({name: 'aboutPage'});
+};
 </script>
 
 <style scoped>
