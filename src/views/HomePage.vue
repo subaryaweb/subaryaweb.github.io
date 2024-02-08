@@ -3,11 +3,9 @@
 		<t-header class="flex items-center h-[calc(72px)]">
 			<t-head-menu default-value="2-1" expand-type="popup">
 				<template #logo>
-					<router-link :to="{name: 'HomePage'}">
-						<div class="font-bold text-xl ml-8"> SubaRya</div>
-					</router-link>
+					<t-avatar shape="circle" size="50px" :image="image" class="font-bold text-xl ml-8">  </t-avatar>
 				</template>
-				<t-menu-item value="2" class="text-md font-semibold">
+				<t-menu-item value="2" class="text-md font-semibold" @click="handleClickHome()">
 					Home
 				</t-menu-item>
 				<t-menu-item value="3" class="text-md font-semibold" @click="handleClickAboutme()">
@@ -53,6 +51,12 @@ import {ref} from "vue";
 
 const router = useRouter();
 const pageVal = ref(false);
+const image = "https://imgur.com/Yir9im6.png";
+
+const handleClickHome = () => {
+	pageVal.value = false;
+	router.push({name: 'HomePage'});
+};
 
 const handleClickProjects = () => {
 	pageVal.value = true;
@@ -63,6 +67,8 @@ const handleClickAboutme = () => {
 	pageVal.value = true;
 	router.push({name: 'aboutPage'});
 };
+
+
 </script>
 
 <style scoped>
