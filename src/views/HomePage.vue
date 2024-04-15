@@ -1,55 +1,92 @@
 <template>
-	<Card
-		class="mt--12 mx-4 sm:mx-8 md:mx-12 lg:mx-12 xl:mx-12 2xl:mx-auto mt-24 max-w-screen-2xl shadow-color border-2"
-		v-if="!checked"
-	>
-		<template #title>
-			<div class="mt-5 mx-auto flex justify-center text-4xl">
-				Welcome to SubaRya's Page !
-			</div>
-		</template>
-		<template #content>
-			<div class="ml-12 text-2xl flex justify-center"></div>
-			<div class="ml-12 text-2xl flex justify-center"></div>
-		</template>
-	</Card>
-	<Card
-		class="mx-4 sm:mx-8 md:mx-12 lg:mx-12 xl:mx-12 2xl:mx-auto mt-24 max-w-screen-2xl shadow-color-dark border-2"
-		v-else
-	>
-		<template #title> Welcome ! </template>
-		<template #content> </template>
-	</Card>
+	<t-layout>
+		<t-header class="flex items-center h-[calc(72px)]">
+			<t-head-menu default-value="2-1" expand-type="popup">
+				<template #logo>
+					<t-avatar shape="circle" size="50px" :image="image" class="font-bold text-xl ml-8"></t-avatar>
+				</template>
+				<t-menu-item value="1" class="text-md font-semibold" @click="handleClickHome()">
+					Home
+				</t-menu-item>
+				<t-menu-item value="2" class="text-md font-semibold" @click="handleClickAboutme()">
+					About Me
+				</t-menu-item>
+				<t-menu-item value="3" class="text-md font-semibold" @click="handleClickProjects()">
+					Projects
+				</t-menu-item>
+				<template #operations>
+					<t-space>
+						<SunnyIcon v-if="!checked" />
+						<MoonIcon v-else />
+						<t-switch class="mr-4" v-model="checked" @change="onChangeSwitch" />
+					</t-space>
+					<t-button variant="text" shape="square" class="mr-4">
+						<template #icon>
+							<a href="https://github.com/KutsunaSubaRya" target="_blank">
+								<LogoGithubIcon />
+							</a>
+						</template>
+					</t-button>
+				</template>
+			</t-head-menu>
+		</t-header>
+		<t-layout class="flex">
+			<router-view v-if="pageVal">
+			</router-view>
+			<Content v-if="!pageVal"
+					 class="h-[calc(100vh-72px)] overflow-y-auto py-8 px-12 flex items-center justify-center flex-col">
+				<t-card hover-shadow header-bordered
+						class="flex items-center justify-center font-bold text-3xl w-2/3 h-2/3 rounded-3xl">
+					<div>
+						Welcome to SubaRya's Project !
+					</div>
+				</t-card>
+			</Content>
+		</t-layout>
+	</t-layout>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { LogoGithubIcon } from "tdesign-icons-vue-next";
+import { Content } from "tdesign-vue-next";
+import { useRouter } from "vue-router";
+import { onMounted, ref } from "vue";
+import { SwitchProps } from "tdesign-vue-next";
+import { SunnyIcon, MoonIcon } from "tdesign-icons-vue-next";
 
-<style lang="scss">
-.accordion-custom i span {
-	vertical-align: middle;
-}
+const router = useRouter();
+const pageVal = ref(false);
+const image = "https://imgur.com/Yir9im6.png";
 
-.accordion-custom span {
-	margin: 0 0.5rem;
-}
+const checked = ref(true);
+const onChangeSwitch: SwitchProps["onChange"] = (val) => {
+	if (val) {
+		document.documentElement.setAttribute("theme-mode", "dark");
+	} else {
+		document.documentElement.removeAttribute("theme-mode");
+	}
+};
 
-.shadow-color {
-	transition: box-shadow 0.3s;
-	border-radius: 10px;
-}
+const handleClickHome = () => {
+	pageVal.value = false;
+	router.push({ name: "HomePage" });
+};
 
-.shadow-color:hover {
-	box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
-}
+const handleClickProjects = () => {
+	pageVal.value = true;
+	router.push({ name: "projectsPage" });
+};
 
-.shadow-color-dark {
-	transition: box-shadow 0.3s;
-	border-color: rgb(38, 50, 56);
-	border-width: 1px;
-	border-radius: 10px;
-}
+const handleClickAboutme = () => {
+	pageVal.value = true;
+	router.push({ name: "aboutPage" });
+};
 
-.shadow-color-dark:hover {
-	box-shadow: 0 0 11px rgb(255, 255, 255);
-}
+onMounted(() => {
+	document.documentElement.setAttribute("theme-mode", "dark");
+});
+
+</script>
+
+<style scoped>
 </style>
