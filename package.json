@@ -20,6 +20,7 @@
 		"pinia-plugin-persistedstate": "^3.2.1",
 		"postcss": "^8.4.33",
 		"prettier": "^2.8.7",
+		"swiper": "^11.0.7",
 		"tdesign-icons-vue-next": "^0.2.2",
 		"tdesign-vue-next": "^1.8.0",
 		"unplugin-auto-import": "^0.15.2",
