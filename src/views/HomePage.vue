@@ -38,10 +38,7 @@
 				<t-card hover-shadow header-bordered
 						class="flex items-center justify-center font-bold text-3xl w-2/3 h-2/3 rounded-3xl">
 					<div>
-						Hi,
-					</div>
-					<div>
-						Welcome to SubaRya's Page !
+						Welcome to SubaRya's Project !
 					</div>
 				</t-card>
 			</Content>
