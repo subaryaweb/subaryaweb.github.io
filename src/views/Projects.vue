@@ -1,7 +1,7 @@
 <template>
 	<t-layout class="flex">
 		<t-aside class="w-1/2 min-w-56 max-w-88 h-[calc(100vh-72px)] overflow-y-auto  items-center">
-			<t-menu v-model="menuVal" class="!h-[calc(100vh-120px)]">
+			<t-menu class="!h-[calc(100vh-120px)]">
 				<t-popup placement="right">
 					<t-menu-item
 						:key="1"
