@@ -5,10 +5,10 @@
 				<template #logo>
 					<t-avatar shape="circle" size="50px" :image="image" class="font-bold text-xl ml-8"></t-avatar>
 				</template>
-				<t-menu-item value="2" class="text-md font-semibold" @click="handleClickHome()">
+				<t-menu-item value="1" class="text-md font-semibold" @click="handleClickHome()">
 					Home
 				</t-menu-item>
-				<t-menu-item value="3" class="text-md font-semibold" @click="handleClickAboutme()">
+				<t-menu-item value="2" class="text-md font-semibold" @click="handleClickAboutme()">
 					About Me
 				</t-menu-item>
 				<t-menu-item value="3" class="text-md font-semibold" @click="handleClickProjects()">
