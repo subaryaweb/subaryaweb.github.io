@@ -3,7 +3,7 @@
 		<t-header class="flex items-center h-[calc(72px)]">
 			<t-head-menu default-value="2-1" expand-type="popup">
 				<template #logo>
-					<t-avatar shape="circle" size="50px" :image="image" class="font-bold text-xl ml-8"></t-avatar>
+					<t-avatar shape="circle" size="50px" image="/assets/SubaRya.png" class="font-bold text-xl ml-8"></t-avatar>
 				</template>
 				<t-menu-item value="1" class="text-md font-semibold" @click="handleClickHome()">
 					Home
@@ -56,7 +56,7 @@ import { SunnyIcon, MoonIcon } from "tdesign-icons-vue-next";
 
 const router = useRouter();
 const pageVal = ref(false);
-const image = "https://imgur.com/Yir9im6.png";
+const image = "/assets/SubaRya.png";
 
 const checked = ref(true);
 const onChangeSwitch: SwitchProps["onChange"] = (val) => {
