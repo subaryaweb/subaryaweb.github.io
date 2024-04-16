@@ -118,9 +118,9 @@ import projectNTNUCIDS from "@/components/projectNTNU-CIDS.vue";
 import projectCourseAssist from "@/components/projectCourseAssist.vue";
 import { Content } from "tdesign-vue-next";
 import { UsergroupIcon, Gamepad1Icon, SystemSettingIcon, ChartIcon, NotificationIcon, MobileIcon } from "tdesign-icons-vue-next";
-import { ref } from "vue";
+import { shallowRef } from "vue";
 
-const curComponent = ref(projectJC);
+const curComponent = shallowRef(projectJC);
 </script>
 
 <style lang="scss">
