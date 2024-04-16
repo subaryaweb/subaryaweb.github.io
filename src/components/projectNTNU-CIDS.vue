@@ -52,32 +52,19 @@
 
 
 <script setup lang="ts">
-import { ref } from "vue";
-import { Swiper, SwiperItem, Slider } from "tdesign-vue-next";
+import { Swiper, SwiperItem } from "tdesign-vue-next";
+import { useSwiperStore } from "@/stores/swiper";
 
-const size = ref(3);
-const max = 6;
-const min = 3;
-const link = "src/assets/swiperImage/ntnu_cids/";
-const ext = ".png";
+const swiperStore = useSwiperStore();
 
 const getImage = (index: number) => {
-	return link + index.toString() + ext;
+	const path:string = swiperStore.getPath;
+	const ext:string = swiperStore.getExt;
+	return path + 'ntnu_cids/' + index.toString() + ext;
 };
-
 </script>
 
 <style lang="scss">
-//.t-swiper__navigation-item {
-//	span {
-//		background-color: #888888 !important;
-//	}
-//}
-//.t-is-active {
-//	span {
-//		background-color: #2d2d2d !important;
-//	}
-//}
 .t-space .t-space-item {
 	width: 100%;
 }
