@@ -14,6 +14,9 @@
 				<t-menu-item value="3" class="text-md font-semibold" @click="handleClickProjects()">
 					Projects
 				</t-menu-item>
+        <t-menu-item value="4" class="text-md font-semibold" @click="handleClickResume()">
+          Resume
+        </t-menu-item>
 				<template #operations>
 					<t-space>
 						<SunnyIcon v-if="!checked" />
@@ -80,6 +83,11 @@ const handleClickProjects = () => {
 const handleClickAboutme = () => {
 	pageVal.value = true;
 	router.push({ name: "aboutPage" });
+};
+
+const handleClickResume = () => {
+  pageVal.value = true;
+  router.push({ name: "resumePage" });
 };
 
 onMounted(() => {
